@@ -1,0 +1,20 @@
+<!Doctype html>
+<body>
+    
+        <form name="myform" onsubmit="my()">
+        <input type="textbox" name="abc">
+        <input type="submit">
+    </form>
+    <script>
+        function my(){
+        let a=document.forms["myform"]["abc"].value;
+        if (a==""){
+            alert("please fill the box");
+        }
+        if(isNaN(a)){
+            alert("please enter a number");
+        }
+        }
+    </script>
+</body>
+</html>
