@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<body>
+    <form name="registration_form" onsubmit="myform()">
+    <table>
+    <tr>
+    <td>Enter your name </td>
+    <td><input type="textbox" placeholder="your name" name="name"> <span id="nameid"></span></td>
+    </tr>
+    <tr>
+        <td>Enter your Phone number</td>
+        <td><input type="textbox" placeholder="Your phone number" name="number"> <span id="numberid"></span></td>
+    </tr>
+    <tr>
+        <td>Enter your Email ID</td>
+        <td><input type="email" placeholder="Your email ID" name="email_name"> <span id="emailid"></span></td>
+    </tr>
+    <tr>
+        <td>Enter your password</td>
+        <td><input type="password" placeholder="Password" name="pass"> <span id="passid"></span></td>
+    </tr>
+    <tr rowspan="2">
+        <td><input type="submit"></td>
+    </tr>
+</table>
+    </form>
+    <script>
+        function myform()
+        {
+            event.preventDefault();
+            let a=document.forms["registration_form"]["name"].value;
+            if (a=="")
+            
+            {
+                
+                document.getElementById("nameid").innerHTML="Enter valid name...";
+            }
+            let b=document.forms["registration_form"]["number"].value;
+            if(isNaN(b) || b > 9999999999 || b=="")
+            {
+                
+                document.getElementById("numberid").innerHTML="Enter valid phone number...";
+            }   
+            let e=document.forms["registration_form"]["email_name"].value;
+            console.log(e)
+            if(e==="")
+            {
+                
+                document.getElementById("emailid").innerHTML="Enter valid email ID...";
+            }
+            let c=document.forms["registration_form"]["pass"].value;
+            if(c.length < 8 || c.toUpperCase() == c || c.toLowerCase() == c || c=="")
+            {
+                
+                document.getElementById("passid").innerHTML="Password should have atleast 8 characters\natleast One uppercase letter\natleast One lowercase letter";
+            }
+        }
+    </script>
+</body>
+</html>
