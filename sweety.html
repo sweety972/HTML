@@ -18,8 +18,13 @@
         <td>Enter your password</td>
         <td><input type="password" placeholder="Password" name="pass"> <span id="passid"></span></td>
     </tr>
-    <tr rowspan="2">
+    <tr>
+        <td>Re-enter password</td>
+        <td><input type="password" placeholder="Re-enter password" name="reenter"><span id="repass"></span></td>
+    </tr>
+    <tr>
         <td><input type="submit"></td>
+        <td><input type="reset"></td>
     </tr>
 </table>
     </form>
@@ -52,6 +57,11 @@
             {
                 
                 document.getElementById("passid").innerHTML="Password should have atleast 8 characters\natleast One uppercase letter\natleast One lowercase letter";
+            }
+            let x=document.forms["registration_form"]["reenter"].value;
+            if(x!=c)
+            {
+                document.getElementById("repass").innerHTML="Passwords do not match...";
             }
         }
     </script>

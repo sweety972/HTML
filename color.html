@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <center>
+            <button id="abc">click me</button>
+        </center>
+    </body>
+    <script>
+        document.getElementById("abc").addEventListener("click",rcolor);
+        function rcolor()
+        {
+            var rcol="#";
+            for(var i=0;i<6;i++){
+                rcol+=Math.floor(Math.random()*10);
+            }
+            document.body.style.background=rcol;
+        }
+    </script>
+</html>
