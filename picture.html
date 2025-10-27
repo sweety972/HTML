@@ -3,8 +3,27 @@
         <script>
             window.onload=() =>{
                 const abc=document.getElementById("abc");
-                const text=document.get
-            }
+                const text=document.getElementById("textbox");
+                const img=document.getElementById("imgbox");
+
+                abc.onmouseover=() => {
+                    text.style.display ="none";
+                    img.style.display ="block";
+                };
+                abc.onmouseleave = () =>{
+                    img.style.display="none";
+                    text.style.display="block";
+                };               
+            };
         </script>
     </head>
+    <body>
+        <div id="abc">
+            <div id="textbox"><center>PLACE THE MOUSE IN THE POINTER</div>
+            <div id="imgbox">
+                <img src="C:\Users\cacet\Desktop\logo.png" width="500" height="500">
+            </center>
+            </div>
+        </div>
+    </body>
 </html>
