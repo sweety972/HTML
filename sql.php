@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<body>
+    <form action="connection.php" method="POST">
+        Name:
+        <input type="textbox" name="name">
+        Roll No:
+        <input type="number" name="rollno">
+        Age:
+        <input type="submit" name="submit">
+        <input type="reset" name="reset">
+
+    </form>
+</body>
+</html>
